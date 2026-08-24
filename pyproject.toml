@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "msawf"
+version = "0.1.0"
+description = "Research implementation of Multi-stage Augmentation Website Fingerprinting"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "torch>=2.3",
+]
+
+[project.scripts]
+msawf-train = "msawf.runtime.run:main"
+msawf-eval = "msawf.evaluation.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["msawf*"]
+exclude = ["tests*"]

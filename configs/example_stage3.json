@@ -1,0 +1,12 @@
+{
+  "paths": {
+    "target_dataset": "data/processed/target_real.jsonl",
+    "split_manifest": "data/manifests/split-0.json",
+    "checkpoint_input": "checkpoints/stage2/stage2-final.pt",
+    "checkpoint_output_dir": "checkpoints/stage3"
+  },
+  "few_shot": {
+    "way": 100,
+    "shot": 10
+  }
+}

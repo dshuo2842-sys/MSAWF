@@ -1,0 +1,69 @@
+{
+  "data": {
+    "representation": "packet_direction",
+    "padding_value": 0,
+    "max_length": 15000,
+    "prefix_lengths": [3000, 5000, 8000, 10000, 15000]
+  },
+  "model": {
+    "backbone": "msawf_cnn_v1",
+    "input_length": 15000,
+    "feature_tap": "flattened_final_encoder_output",
+    "feature_dim": 14592,
+    "feature_normalization": false,
+    "closed_world_classes": 100,
+    "open_world_classes": 101
+  },
+  "optimization": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": null
+  },
+  "augmentation": {
+    "stage1_probability": 0.2,
+    "stage3_probability": 0.2,
+    "probability_policy": "fixed",
+    "noise_evaluation_probabilities": [0.0, 0.1, 0.2, 0.3]
+  },
+  "training": {
+    "seed": 18,
+    "batch_size": 64,
+    "stage1_epochs": 50,
+    "stage2_epochs": 20,
+    "stage3_epochs": 50,
+    "checkpoint_selection": "last_epoch",
+    "early_stopping": false
+  },
+  "loss": {
+    "lambda_con": 0.1,
+    "lambda_align": 0.1,
+    "lambda_rob": 0.5
+  },
+  "evaluation": {
+    "probability_transform": "sigmoid",
+    "label_threshold": 0.5,
+    "multilabel_reduction": "samples",
+    "zero_division": 0,
+    "top_k": 5,
+    "confidence_threshold": 0.7,
+    "stability_threshold": 0.7,
+    "observation_points": [3000, 5000, 8000, 10000, 15000],
+    "first_point_can_decide": false,
+    "final_point_fallback": true
+  },
+  "paths": {
+    "source_dataset": "UNRESOLVED",
+    "target_dataset": "UNRESOLVED",
+    "split_manifest": "UNRESOLVED",
+    "defense_dataset": "UNRESOLVED",
+    "checkpoint_input": "UNRESOLVED",
+    "checkpoint_output_dir": "UNRESOLVED"
+  },
+  "few_shot": {
+    "way": "UNRESOLVED",
+    "shot": "UNRESOLVED",
+    "support_size": "UNRESOLVED",
+    "query_size": "UNRESOLVED"
+  }
+}

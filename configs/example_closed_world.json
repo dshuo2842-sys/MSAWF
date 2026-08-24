@@ -1,0 +1,11 @@
+{
+  "model": {
+    "closed_world_classes": 100
+  },
+  "paths": {
+    "target_dataset": "data/processed/target_real.jsonl",
+    "split_manifest": "data/manifests/split-0.json",
+    "checkpoint_input": "checkpoints/stage3/stage3-final.pt",
+    "checkpoint_output_dir": "outputs/closed_world"
+  }
+}

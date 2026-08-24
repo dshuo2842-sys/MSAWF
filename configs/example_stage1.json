@@ -1,0 +1,7 @@
+{
+  "paths": {
+    "source_dataset": "data/processed/source_single_tab.jsonl",
+    "split_manifest": "data/manifests/synthetic-five-tab-v1.json",
+    "checkpoint_output_dir": "checkpoints/stage1"
+  }
+}

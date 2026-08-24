@@ -1,0 +1,46 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Package/build output
+build/
+dist/
+*.egg-info/
+
+# Model artifacts
+*.pth
+*.pt
+*.ckpt
+checkpoints/
+
+# Private or generated data
+data/raw/
+data/processed/
+datasets/
+
+# Experiment output
+logs/
+results/
+outputs/
+runs/
+cache/
+*.log
+
+# Editors and temporary files
+.idea/
+.vscode/
+*.tmp
+*.temp
+*.swp
+*~
